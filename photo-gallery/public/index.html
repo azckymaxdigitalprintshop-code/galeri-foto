@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Foto ✨</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>📸 Galeri Foto Lucu</h1>
+    <p>Koleksi foto spesial — lihat & unduh sepuasnya!</p>
+    <div class="nav">
+      <a href="/">Beranda</a>
+      <a href="/admin" class="secondary">🔐 Admin</a>
+    </div>
+  </header>
+
+  <main class="gallery-container">
+    <h2 class="gallery-title">🌸 Semua Foto 🌸</h2>
+
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Memuat foto...</p>
+    </div>
+
+    <div id="empty" class="empty-state" style="display: none;">
+      <div class="emoji">🖼️</div>
+      <h2>Belum ada foto</h2>
+      <p>Admin belum mengunggah foto apapun.<br>Silakan cek lagi nanti ya!</p>
+    </div>
+
+    <div id="gallery" class="gallery-grid"></div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">×</button>
+      <div class="photo-frame">
+        <img id="lightbox-img" src="" alt="Foto besar">
+      </div>
+      <a id="lightbox-download" href="#" class="btn-download" download style="margin-top: 1rem;">
+        ⬇️ Download Foto
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Made with 💛 · Galeri Foto Publik
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

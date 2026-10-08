@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Galeri Foto</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🔐 Panel Admin</h1>
+    <p>Upload & kelola foto</p>
+    <div class="nav">
+      <a href="/">← Kembali ke Galeri</a>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <!-- Form Login -->
+    <div id="login-section" class="admin-card">
+      <h2>🔑 Login Admin</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Masukkan password admin..." required>
+        </div>
+        <button type="submit" class="btn btn-primary">Masuk</button>
+      </form>
+      <div id="login-message" class="message"></div>
+    </div>
+
+    <!-- Form Upload (tersembunyi sampai login) -->
+    <div id="upload-section" class="admin-card" style="display: none;">
+      <h2>📤 Upload Foto Baru</h2>
+      <form id="upload-form">
+        <div class="form-group">
+          <label for="photo">Pilih Foto</label>
+          <input type="file" id="photo" accept="image/jpeg,image/png,image/gif,image/webp" required>
+        </div>
+        <div id="preview" class="upload-preview"></div>
+        <button type="submit" class="btn btn-primary">🚀 Upload Foto</button>
+      </form>
+      <div id="upload-message" class="message"></div>
+
+      <button id="logout-btn" class="btn btn-danger">Keluar</button>
+
+      <!-- Daftar foto admin -->
+      <div class="admin-photos">
+        <h3>📋 Daftar Foto</h3>
+        <div id="admin-photo-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Panel Admin · Hanya untuk pemilik galeri
+  </footer>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
